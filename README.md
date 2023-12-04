@@ -64,15 +64,5 @@ Run the project
 4. Open the swagger-ui with the link below
 
 ```text
-http://localhost:5000/swagger-ui.html#/
+http://localhost:8080/swagger-ui.html#/
 ```
-
------------------------------------------
-## My solution
-I've tried to make it as much production ready as I could.
-For instance, I've added custom error handling mechanisms, lots of validations on top of 
-request objects on real life validations where user might enter unwanted character in the name of the ingredient, very long name, or he might enter numberOfServing of non-positive number etc.
-I didn't put restrictions for user to put the same name for ingredient or the recipe because for example recipe named "pasta" might be cooked with different ingredient, but it's still a pasta
-
-I've decided to use simple relational db called H2 and made the relations between ingredients and recipes as many-to-many relationship, since many ingredients might be used in many recipes. 
-Finally, I've tried to cover as much as test cases I could, I have 75 unit and integration tests, I might have added more, but I needed to finish the task for today 
