@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://admin:password@localhost:27018/recipes?authSource=admin
+      auto-index-creation: true
+
+cache:
+  ttl: 10
+
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    com.codingchallenge.recipes: DEBUG

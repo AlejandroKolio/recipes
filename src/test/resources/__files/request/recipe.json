@@ -1,0 +1,43 @@
+{
+  "id": "005e2313-b4c8-4e2d-9471-44f43f147612",
+  "name": "Caesar Salad",
+  "isVegetarian": false,
+  "servings": 4,
+  "uniqueSignature": "CaesarSalad-4-NonVeg",
+  "ingredients": [
+    {
+      "name": "Romaine Lettuce",
+      "unit": "head",
+      "quantity": "1"
+    },
+    {
+      "name": "Croutons",
+      "unit": "cups",
+      "quantity": "2"
+    },
+    {
+      "name": "Parmesan Cheese",
+      "unit": "tbsp",
+      "quantity": "3"
+    },
+    {
+      "name": "Caesar Dressing",
+      "unit": "tbsp",
+      "quantity": "6"
+    },
+    {
+      "name": "Chicken Breast",
+      "unit": "pcs",
+      "quantity": "2"
+    },
+    {
+      "name": "Anchovies",
+      "unit": "pcs",
+      "quantity": "4"
+    }
+  ],
+  "instructions": "Grill chicken breasts until cooked and slice. Chop lettuce and combine in a bowl with croutons, shaved parmesan, and dressing. Top with chicken slices and anchovies.",
+  "createdDate": "2023-12-04T10:50:24.649288",
+  "updatedDate": "2023-12-04T10:50:24.649288",
+  "version": 1
+}

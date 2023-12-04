@@ -1,0 +1,8 @@
+cache:
+  ttl: 10
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework: DEBUG
+    com.codingchallenge.recipes: DEBUG
