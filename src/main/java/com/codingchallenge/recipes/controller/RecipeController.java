@@ -4,6 +4,7 @@ import com.codingchallenge.recipes.controller.dto.RecipeRequest;
 import com.codingchallenge.recipes.controller.dto.RecipeResponse;
 import com.codingchallenge.recipes.service.RecipeService;
 import com.codingchallenge.recipes.service.validation.ValidRecipeFilter;
+import io.swagger.annotations.ApiOperation;
 import java.util.Map;
 import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -29,27 +30,32 @@ public class RecipeController {
   private final RecipeService recipeService;
 
   @GetMapping
+  @ApiOperation(value = "get all recipes", notes = "Retrieves a list of all recipes by filter")
   public Flux<RecipeResponse> getAllRecipes(
       @RequestParam(required = false) @Valid Map<@ValidRecipeFilter String, String> criteria) {
     return recipeService.getAllRecipes(criteria);
   }
 
   @GetMapping("/{recipeId}")
+  @ApiOperation(value = "get recipe by id", notes = "Retrieve recipe by id")
   public Mono<RecipeResponse> getRecipe(@PathVariable(name = "recipeId") String recipeId) {
     return recipeService.getRecipe(recipeId);
   }
 
   @PostMapping
+  @ApiOperation(value = "create recipe", notes = "Creates new recipe")
   public Mono<RecipeResponse> createRecipe(@RequestBody RecipeRequest recipeRequest) {
     return recipeService.createRecipe(recipeRequest);
   }
 
   @PutMapping("/{recipeId}")
+  @ApiOperation(value = "update recipe", notes = "Update recipe")
   public Mono<RecipeResponse> updateRecipe(@PathVariable(name = "recipeId") String recipeId, @RequestBody RecipeRequest recipeRequest) {
     return recipeService.updateRecipe(recipeId, recipeRequest);
   }
 
   @DeleteMapping("/{recipeId}")
+  @ApiOperation(value = "delete recipe", notes = "Delete recipe")
   public Mono<RecipeResponse> deleteRecipe(@PathVariable(name = "recipeId") String recipeId) {
     return recipeService.deleteRecipe(recipeId);
   }
